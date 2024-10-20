@@ -27,3 +27,7 @@ def create_table_in_sql(table_name: str):
 
     query = f"CREATE TABLE IF NOT EXISTS {table_name} ({columns_create})"
     return query
+
+
+def create_table(table_name):
+    query = create_table_in_sql(table_name)
