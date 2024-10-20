@@ -21,5 +21,9 @@ def create_table_in_sql(table_name: str):
                      gene_score VARCHAR(11),
                      syndromic TINYINT,
                      number-of-reports TINYINT,
-                     gene_biotype VARCHAR(255)
+                     gene_biotype VARCHAR(255),
+                     ID VARCHAR(50)
                      """
+
+    query = f"CREATE TABLE IF NOT EXISTS {table_name} ({columns_create})"
+    return query
