@@ -31,3 +31,12 @@ def create_table_in_sql(table_name: str):
 
 def create_table(table_name):
     query = create_table_in_sql(table_name)
+
+    conn = mysql.connector.connect(host='localhost', user='root',
+                                   password='dance')  # MySQL connection.
+    cursor = conn.cursor()
+    cursor.execute(query)
+    conn.commit()
+
+
+create_table("asd_rna_seq.gen_human")
