@@ -13,14 +13,14 @@ def read_first_line(file_path):
 def create_table_in_sql(table_name: str):
     columns_create = """
                      status INT,
-                     gene-symbol VARCHAR(20),
-                     gene-name VARCHAR(255),
-                     ensembl-id VARCHAR(255),
+                     gene_symbol VARCHAR(20),
+                     gene_name VARCHAR(255),
+                     ensembl_id VARCHAR(255),
                      chromosome VARCHAR(4),
-                     genetic-category TEXT,
+                     genetic_category TEXT,
                      gene_score VARCHAR(11),
                      syndromic TINYINT,
-                     number-of-reports TINYINT,
+                     number_of_reports TINYINT,
                      gene_biotype VARCHAR(255),
                      ID VARCHAR(50)
                      """
@@ -39,4 +39,8 @@ def create_table(table_name):
     conn.commit()
 
 
-create_table("asd_rna_seq.gen_human")
+def create_insert_query(values_line):
+    query = f"INSERT INTO asd_rna_seq.gen_human VALUES({values_line})"
+    return query
+
+# create_table("asd_rna_seq.SFARI_results")
