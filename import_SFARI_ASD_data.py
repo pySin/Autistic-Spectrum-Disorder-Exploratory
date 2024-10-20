@@ -43,4 +43,11 @@ def create_insert_query(values_line):
     query = f"INSERT INTO asd_rna_seq.gen_human VALUES({values_line})"
     return query
 
+
+#  Add values to Database table
+def insert_values():
+    o_file = open(FILE_PATH, "r")
+    first_line_omit = o_file.readline()
+
+
 # create_table("asd_rna_seq.SFARI_results")
