@@ -40,7 +40,8 @@ def create_table(table_name):
 
 
 def create_insert_query(values_line):
-    query = f"INSERT INTO asd_rna_seq.gen_human VALUES({values_line})"
+    query = f"INSERT INTO asd_rna_seq.sfari_results VALUES({values_line});"
+    print(query)
     return query
 
 
@@ -59,6 +60,8 @@ def insert_values():
         #     is_line = False
         # x += 1
 
+        if "NA" in line:
+            line.replace("NA", 'NA')
         query = create_insert_query(line)
         conn = mysql.connector.connect(host='localhost', user='root',
                                        password='dance')  # MySQL connection.
