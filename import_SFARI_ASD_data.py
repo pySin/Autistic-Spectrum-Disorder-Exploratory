@@ -15,5 +15,11 @@ def create_table_in_sql(table_name: str):
                      status INT,
                      gene-symbol VARCHAR(20),
                      gene-name VARCHAR(255),
-                     
+                     ensembl-id VARCHAR(255),
+                     chromosome VARCHAR(4),
+                     genetic-category TEXT,
+                     gene_score VARCHAR(11),
+                     syndromic TINYINT,
+                     number-of-reports TINYINT,
+                     gene_biotype VARCHAR(255)
                      """
