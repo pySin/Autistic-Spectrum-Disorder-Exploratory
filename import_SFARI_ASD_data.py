@@ -9,3 +9,11 @@ def read_first_line(file_path):
         first_line = o_file.readline().split(",")
     return first_line
 
+
+def create_table_in_sql(table_name: str):
+    columns_create = """
+                     status INT,
+                     gene-symbol VARCHAR(20),
+                     gene-name VARCHAR(255),
+                     
+                     """
