@@ -67,4 +67,5 @@ def insert_values():
         conn.commit()
 
 
-# create_table("asd_rna_seq.SFARI_results")
+create_table("asd_rna_seq.SFARI_results")
+insert_values()
